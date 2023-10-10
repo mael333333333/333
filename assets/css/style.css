@@ -1,0 +1,211 @@
+/* Main Styles */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  overflow: hidden;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: black;
+}
+
+/* Class Styles */
+
+.ascii {
+  color:rgb(255, 255, 255);
+  font-family: monospace;
+  font-size: 50pt;
+  background-color: rgb(0, 0, 0);
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+  }
+
+  /* Classes for Banners and ASCII-Art */
+
+  .ascii .banner-medium {
+    font-size: 1.04vw;
+    margin-top: 50px;
+  }
+
+  .ascii .banner-large {
+    font-size: 0.85vw;
+  }
+
+  .ascii .banner-xlarge {
+    font-size: 0.72vw;
+  }
+
+  .ascii .bat-small-width {
+    font-size: 4.775vw;
+  }
+
+  .ascii .bat-medium-width {
+    font-size: 1.3vw;
+    color: red;
+  }
+
+  .ascii .bat-large-width {
+    font-size: 2.1vw;
+  }
+
+  .ascii pre.banner-title {
+    position: sticky;
+    inset: 0 0 auto;
+    font-size: 1.04vw;
+    margin-top: 2em;
+  }
+
+  
+  .ascii .popups {
+    position:fixed;
+    inset: calc(11 * 1.04vw) 0 0;
+    overflow: auto;
+  }
+
+  /* TRYOUT AUTOSCROLL */
+
+  .canvas {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .canvas .pre {
+    animation: pre 3s linear infinite;
+  }
+
+  /* TRYOUT ENDS */
+
+  .ascii .popups .canvas {
+    width: 1000vw;
+    height: 200vh;
+
+  }
+  .ascii .popups pre {
+    position: absolute;
+    /* background: black; */
+    /* border: 1px solid white; */ 
+  }
+  .ascii .popups  pre.inverted {
+    color: black;
+    background: white;
+  }
+  .ascii pre[class^="image"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ascii .image1 {
+    font-size: 0.157vw;
+  }
+  .ascii .stills {
+    font-size: .157vw;
+  }
+/* !!! IMAGE BLEND COLOR */
+
+  .stills:after {
+   content: "";
+   background-image: url(../images/01.jpeg);   
+   position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: overlay;
+    overflow: hidden;
+    box-shadow: 100px 200px 150px silver;
+    border-radius: 100px;
+  } 
+
+  .ascii .image2 {
+    font-size: 0.268vw;
+  }
+
+  /* test for overflow / multilayers */ 
+  .container {
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: rgb(0, 255, 0);
+    /* important part */
+    display: grid;
+    place-items: center;
+    grid-template-areas: "inner-div";
+    pointer-events: all;
+
+    mix-blend-mode: multiply;
+  }
+  .ascii {
+    height: 100vh;
+  }
+
+  .wrapper {
+    position: absolute;
+    inset: 50vh 0 0;
+    pointer-events: none;
+  }
+
+  .ascii, .wrapper {
+    overflow-y: auto;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+       scrollbar-width: none;  /* Firefox */
+  }
+
+  .ascii::-webkit-scrollbar,
+  .wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .inner {
+    height: 500px;
+    width: 500px;
+    /* important part */
+    grid-area: inner-div;
+  }
+
+
+
+  /* Test end*/ 
+
+.testtest {
+    font-size: 1vw;
+    color: white;
+  }
+
+  /* SPEECH BUBBLE TEST */
+ /*
+  .box {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80vw;
+    background: none;
+    text-align: center;
+    padding:20px;
+    position:relative;
+    border-radius:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: grey;
+    border-width: 5px;
+  }
+  .triangle:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid grey;
+    border-right: 10px solid transparent;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid transparent;
+    right: -20px;
+    top: 6px;
+    border-color: grey;
+    border-width: 5px;
+  }
+
+  */ 
