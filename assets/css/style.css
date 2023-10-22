@@ -1,4 +1,5 @@
 /* Main Styles */
+
 * {
   box-sizing: border-box;
 }
@@ -21,6 +22,7 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: scroll;
+  overflow-y: hidden;
   }
 
   /* Classes for Banners and ASCII-Art */
@@ -47,6 +49,12 @@ body {
     color: red;
   }
 
+  .ascii .bat-medium-width2 {
+    font-size: 1.3vw;
+    color: white;
+    background-color: black;;
+  }
+
   .ascii .bat-large-width {
     font-size: 2.1vw;
   }
@@ -56,6 +64,7 @@ body {
     inset: 0 0 auto;
     font-size: 1.04vw;
     margin-top: 4.2vh;
+    color: black;
   }
 
   
@@ -63,6 +72,7 @@ body {
     position:fixed;
     inset: calc(11 * 1.04vw) 0 0;
     overflow: auto;
+    overflow-y: hidden;
   }
 
   /* TRYOUT AUTOSCROLL */
@@ -79,8 +89,8 @@ body {
   /* TRYOUT ENDS */
 
   .ascii .popups .canvas {
-    width: 1000vw;
-    height: 200vh;
+    width: 2130vw;
+    height: 99vh;
 
   }
   .ascii .popups pre {
@@ -100,6 +110,12 @@ body {
   .ascii .image1 {
     font-size: 0.157vw;
   }
+
+  .ascii .image3 {
+    font-size: 0.157vw;
+    background-color: white;
+    color: black;
+  }
   .ascii .stills {
     font-size: .157vw;
   }
@@ -118,6 +134,7 @@ body {
     mix-blend-mode: overlay;
     overflow: hidden;
   } 
+  
 
   .ascii .image2 {
     font-size: 0.268vw;
@@ -143,7 +160,7 @@ body {
 
   .wrapper {
     position: absolute;
-    inset: 50vh 0 0;
+    inset: 20vh 0 0;
     pointer-events: none;
   }
 
@@ -166,7 +183,10 @@ body {
     grid-area: inner-div;
   }
 
-
+.bubble {
+  font-size: 13pt;
+  font-family: spinner_rack_pro_bbitalic;
+}
 
   /* Test end*/ 
 
@@ -175,35 +195,77 @@ body {
     color: white;
   }
 
-  /* SPEECH BUBBLE TEST */
- /*
-  .box {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 80vw;
-    background: none;
-    text-align: center;
-    padding:20px;
-    position:relative;
-    border-radius:5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-color: grey;
-    border-width: 5px;
-  }
-  .triangle:before {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-left: 10px solid grey;
-    border-right: 10px solid transparent;
-    border-top: 10px solid grey;
-    border-bottom: 10px solid transparent;
-    right: -20px;
-    top: 6px;
-    border-color: grey;
-    border-width: 5px;
-  }
+/* AUTO-SCROLL BUTTONS TEST */
 
-  */ 
+.scroll-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: none;
+  width: 6vw;
+  margin-top: 75vh;
+  height: 10vh;
+}
+
+#playButton, #pauseButton {
+  position: absolute;
+  top: 0;
+  left: 30px; /* Ändere die Position nach Bedarf */
+  background: #fff; /* Hintergrundfarbe anpassen */
+  border: 1px solid #000; /* Rahmen anpassen */
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 30px 20 30 10 black;
+}
+
+#pauseButton {
+  margin-left: 5vw;
+}
+
+/* OVERLAY */
+
+        /* Stil für das Overlay */
+        .overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7); /* Hintergrundfarbe mit Transparenz */
+      }
+
+      /* Stil für das Pop-up-Fenster */
+      .informations {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgb(0, 0, 0);
+          padding: 20px;
+          border: 1px solid #ffffff;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          z-index: 1000;
+          width: 45vw;
+          color: white;
+          
+      }
+      .informations p {
+        font-size: 15pt;
+        font-family: spinner_rack_pro_bbitalic;
+      }
+
+      .informations h2 {
+        font-size: 15pt;
+        font-family: spinner_rack_pro_bbitalic;
+      }
+
+      /* Stil für den Schließen-Button */
+      .close-button {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          color: white;
+      }

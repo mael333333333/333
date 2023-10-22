@@ -1,7 +1,8 @@
 @font-face {
-  font-family: "≈";
+  font-family: 'spinner_rack_pro_bbitalic';
+  src: url('../fonts/spinnerrackprobb-italic-webfont.woff2') format('woff2'),
+       url('../fonts/spinnerrackprobb-italic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-  font-display: auto;
-  src: url("../fonts/ABCRepro-Medium-Trial.woff") format("woff"), url("../fonts/ABCRepro-Medium-Trial.woff2") format("woff2");
+
 }
